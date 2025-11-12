@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -14,9 +15,9 @@
     />
     <style>
       :root {
-        --rosa: #d81b60; /* Rosa vibrante */
-        --rosa-escuro: #880e4f; /* Rosa mais escuro para contrastar */
-        --rosa-claro: #f8bbd0; /* Rosa claro para seções */
+        --rosa: #d81b60;
+        --rosa-escuro: #880e4f;
+        --rosa-claro: #f8bbd0;
         --branco: #ffffff;
         --cinza: #faf7fd;
         --transicao: all 0.4s ease;
@@ -35,14 +36,12 @@
         overflow-x: hidden;
       }
 
-      /* HEADER */
       header {
         position: relative;
         background: linear-gradient(
             135deg,
             rgba(136, 14, 79, 0.8),
-            /* --rosa-escuro com transparência */ rgba(216, 27, 96, 0.8)
-              /* --rosa com transparência */
+            rgba(216, 27, 96, 0.8)
           ),
           url("https://images.unsplash.com/photo-1596767784013-41c33c3a936d?auto=format&fit=crop&w=1400&q=80")
             center/cover no-repeat;
@@ -69,7 +68,6 @@
         animation: fadeIn 1.8s ease-in-out;
       }
 
-      /* NAV */
       nav {
         background: var(--rosa-escuro);
         text-align: center;
@@ -94,7 +92,6 @@
         box-shadow: 0 0 12px rgba(216, 27, 96, 0.4);
       }
 
-      /* SEÇÕES */
       section {
         padding: 90px 10%;
         text-align: center;
@@ -120,7 +117,6 @@
         animation: fadeIn 1.2s ease;
       }
 
-      /* CARDS */
       .cards {
         display: flex;
         flex-wrap: wrap;
@@ -185,7 +181,6 @@
         opacity: 0.85;
       }
 
-      /* SEÇÃO EM BREVE */
       #em-breve {
         background: linear-gradient(135deg, var(--rosa), var(--rosa-escuro));
         color: var(--branco);
@@ -225,7 +220,48 @@
         animation: fadeIn 1.6s ease;
       }
 
-      /* FOOTER */
+      /* NOVA SEÇÃO: CONTATO */
+      #contato {
+        background: var(--rosa-claro);
+        color: var(--rosa-escuro);
+        padding: 90px 10%;
+        text-align: center;
+      }
+
+      #contato h2 {
+        font-size: 2.3em;
+        margin-bottom: 15px;
+      }
+
+      #contato p {
+        font-size: 1.1em;
+        margin-bottom: 25px;
+      }
+
+      .whatsapp-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--rosa);
+        color: var(--branco);
+        text-decoration: none;
+        padding: 14px 24px;
+        border-radius: 30px;
+        font-weight: 600;
+        font-size: 1em;
+        transition: var(--transicao);
+      }
+
+      .whatsapp-btn:hover {
+        background: var(--rosa-escuro);
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(136, 14, 79, 0.3);
+      }
+
+      .whatsapp-btn i {
+        font-size: 1.4em;
+      }
+
       footer {
         background: var(--rosa-escuro);
         color: var(--branco);
@@ -235,7 +271,6 @@
         letter-spacing: 0.5px;
       }
 
-      /* ANIMAÇÕES */
       @keyframes fadeIn {
         0% {
           opacity: 0;
@@ -296,7 +331,6 @@
         }
       }
 
-      /* RESPONSIVIDADE */
       @media (max-width: 768px) {
         header h1 {
           font-size: 2.2em;
@@ -324,6 +358,7 @@
       <a href="#sobre">Sobre</a>
       <a href="#funcoes">Funções</a>
       <a href="#em-breve">Em Breve</a>
+      <a href="#contato">Contato</a>
     </nav>
 
     <section id="sobre">
@@ -403,5 +438,25 @@
         inteligente de encantar suas clientes!
       </p>
     </section>
+
+    <!-- NOVA SEÇÃO DE CONTATO -->
+    <section id="contato">
+      <h2>Para mais informações</h2>
+      <p>Entre em contato com <strong>Geanne</strong> pelo WhatsApp:</p>
+      <a
+        href="https://wa.me/558598112221"
+        class="whatsapp-btn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fab fa-whatsapp"></i> Falar com Geanne
+      </a>
+    </section>
+
+    <footer>
+      © 2025 Beautiful — Desenvolvido com 💗 para salões de beleza.
+    </footer>
   </body>
 </html>
+
+
